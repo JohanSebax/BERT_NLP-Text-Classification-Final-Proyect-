@@ -1,0 +1,51 @@
+{
+  "Otros Trastornos": {
+    "precision": 0.45977011494252873,
+    "recall": 0.45714285714285713,
+    "f1-score": 0.4584527220630373,
+    "support": 175.0
+  },
+  "T. de adaptaci\u00f3n": {
+    "precision": 0.2391304347826087,
+    "recall": 0.23404255319148937,
+    "f1-score": 0.23655913978494625,
+    "support": 47.0
+  },
+  "T. de ansiedad": {
+    "precision": 0.6626984126984127,
+    "recall": 0.5369774919614148,
+    "f1-score": 0.5932504440497336,
+    "support": 311.0
+  },
+  "T. depresivos": {
+    "precision": 0.5,
+    "recall": 0.6008403361344538,
+    "f1-score": 0.5458015267175572,
+    "support": 238.0
+  },
+  "T. externalizantes": {
+    "precision": 0.4205607476635514,
+    "recall": 0.4368932038834951,
+    "f1-score": 0.42857142857142855,
+    "support": 103.0
+  },
+  "T. personalidad": {
+    "precision": 0.45925925925925926,
+    "recall": 0.49206349206349204,
+    "f1-score": 0.47509578544061304,
+    "support": 126.0
+  },
+  "accuracy": 0.508,
+  "macro avg": {
+    "precision": 0.4569031615577268,
+    "recall": 0.459659989062867,
+    "f1-score": 0.45628850777121926,
+    "support": 1000.0
+  },
+  "weighted avg": {
+    "precision": 0.5179825305749439,
+    "recall": 0.508,
+    "f1-score": 0.5097540834975441,
+    "support": 1000.0
+  }
+}

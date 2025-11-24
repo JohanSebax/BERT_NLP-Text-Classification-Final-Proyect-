@@ -1,0 +1,58 @@
+{
+  "hyperparameters": {
+    "learning_rate": 2e-05,
+    "epochs": 10,
+    "dropout_rate": 0.3,
+    "batch_size": 24,
+    "max_length": 500,
+    "warmup_steps": 0,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "sample_size": 5000
+  },
+  "model_config": {
+    "pre_trained_model": "bert-base-multilingual-cased",
+    "n_classes": 6,
+    "random_seed": 42
+  },
+  "data_config": {
+    "dataset_path": "historias_clinicas_procesadas.xlsx",
+    "test_size": 0.2
+  },
+  "code_version": {
+    "python_version": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+    "torch_version": "2.9.0+cu128",
+    "transformers_version": "4.57.1",
+    "timestamp": "2025-11-20T22:12:53.861469"
+  },
+  "dataset_info": {
+    "original_size": null,
+    "sample_size": 5000,
+    "features": [
+      "sexo",
+      "edad",
+      "grupo",
+      "especialidad_medica",
+      "subjetivo",
+      "objetivo",
+      "concatenada",
+      "sexo_codificado",
+      "grupo_codificado"
+    ],
+    "target_column": "grupo_codificado",
+    "n_classes": 6,
+    "original_hash": "05deb52767a543339ba651baf113e3e6",
+    "processed_hash": "bab15416c50bc9dc09e2b48681cca820"
+  },
+  "model_summary": {
+    "total_parameters": 177858054,
+    "trainable_parameters": 177858054,
+    "model_architecture": "BERTTextClassifier(\n  (bert): BertModel(\n    (embeddings): BertEmbeddings(\n      (word_embeddings): Embedding(119547, 768, padding_idx=0)\n      (position_embeddings): Embedding(512, 768)\n      (token_type_embeddings): Embedding(2, 768)\n      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)\n      (dropout): Dropout(p=0.1, inplace=False)\n    )\n    (encoder): BertEncoder(\n      (layer): ModuleList(\n        (0-11): 12 x BertLayer(\n          (attention): BertAttention(\n            (self): BertSdpaSelfAttention(\n              (query): Linear(in_features=768, out_features=768, bias=True)\n              (key): Linear(in_features=768, out_features=768, bias=True)\n              (value): Linear(in_features=768, out_features=768, bias=True)\n              (dropout): Dropout(p=0.1, inplace=False)\n            )\n            (output): BertSelfOutput(\n              (dense): Linear(in_features=768, out_features=768, bias=True)\n              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)\n              (dropout): Dropout(p=0.1, inplace=False)\n            )\n          )\n          (intermediate): BertIntermediate(\n            (dense): Linear(in_features=768, out_features=3072, bias=True)\n            (intermediate_act_fn): GELUActivation()\n          )\n          (output): BertOutput(\n            (dense): Linear(in_features=3072, out_features=768, bias=True)\n            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)\n            (dropout): Dropout(p=0.1, inplace=False)\n          )\n        )\n      )\n    )\n    (pooler): BertPooler(\n      (dense): Linear(in_features=768, out_features=768, bias=True)\n      (activation): Tanh()\n    )\n  )\n  (dropout): Dropout(p=0.3, inplace=False)\n  (linear): Linear(in_features=768, out_features=6, bias=True)\n)"
+  },
+  "final_metrics": {
+    "accuracy": 0.508,
+    "precision": 0.5179825305749439,
+    "recall": 0.508,
+    "f1_score": 0.5097540834975441
+  }
+}
